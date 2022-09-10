@@ -1,0 +1,54 @@
+/**
+ * Name : Muhammad Mursyid Rosli
+ * Matric. No : A0233270R
+ */
+//import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class SquaringArray {
+
+  public static void main(String args[]) {
+    Kattio io = new Kattio(System.in);
+
+    int n = io.getInt();
+    ArrayList<Integer> arr = new ArrayList<Integer>();
+    for (int i = 0; i < n; i++){
+      arr.add(io.getInt());
+    }
+   ArrayList<Integer> sumArr = new ArrayList<Integer>();
+   ArrayList<Integer> reversedArr = reverseArrayList(arr); 
+   for (int i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+        sumArr.addAll(multiplyArray
+                (reversedArr, i));
+    } else {
+        sumArr.addAll(multiplyArray
+                (arr, i));
+    }
+   }
+    sumArr.forEach(x -> io.print(x + " "));
+    io.println();
+    io.close();
+  }
+
+  public static ArrayList<Integer> reverseArrayList(ArrayList<Integer> alist){
+        // Arraylist for storing reversed elements
+        ArrayList<Integer> revArrayList = new ArrayList<Integer>();
+        for (int i = alist.size() - 1; i >= 0; i--) {
+ 
+            // Append the elements in reverse order
+            revArrayList.add(alist.get(i));
+        }
+ 
+        // Return the reversed arraylist
+        return revArrayList;
+    }
+
+  public static List<Integer> multiplyArray(ArrayList<Integer> arr, int multiplier) {
+    return arr.stream().map(e -> e* multiplier)
+        .collect(Collectors.toList());
+        //arr.map(x -> x * multiplier);
+  }
+
+}

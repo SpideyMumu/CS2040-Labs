@@ -1,0 +1,51 @@
+/**
+ * Name : Muhammad Mursyid
+ * Matric. No : A0233270R
+ */
+
+import java.util.Scanner;
+
+public class TwoDCipher {
+  
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+
+    int rows = sc.nextInt();
+    int columns = sc.nextInt();
+
+    sc.nextLine();
+
+    String text = sc.nextLine();
+
+    System.out.println(encryptor(text, rows, columns));
+  }
+
+  /*private static String[][] convert2DArray(String s, int  rows, int columns) {
+      String[][] arr = new String[rows][columns];
+
+      for(int row = 0; row < arr.length; row++) {
+          for(int col = 0; col < arr[row].length; col++) {
+              arr[row][col] = s.charAt(row + col);
+          }
+      }
+     return arr; 
+  }*/
+
+  private static String encryptor(String str, int row,  int col) {
+    String newStr = "";
+
+    for(int r = 0; r < row; r++) {
+	    for(int c = 0; c < col; c++) {
+            int caesarNum = (r + 1) * (c + 1);
+		    newStr += (char) (str.charAt(r + c) + caesarNum);            
+	    }
+    }
+
+    return newStr;
+}
+  
+  private static String rearranger(String str) {
+    return str;     
+  }
+
+}
