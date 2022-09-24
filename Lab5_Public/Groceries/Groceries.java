@@ -12,11 +12,11 @@ public class Groceries {
     int numOfItems = io.getInt();
     int minItems = io.getInt();
     int freeItems = io.getInt();
-    int[] items = new int[numOfItems];
+    long[] items = new long[numOfItems];
     //ArrayList<Integer> arr = new ArrayList<Integer>;
 
     for (int i = 0; i < numOfItems; i++) {
-        items[i] = io.getInt();
+        items[i] = io.getLong();
     }
 
     if (numOfItems < minItems) {
@@ -35,11 +35,11 @@ public class Groceries {
     io.close();
   }
 
-  static int calcPromo(int[] items, int freeItems, int minItems) {
+  static long calcPromo(long[] items, int freeItems, int minItems) {
     //1. Sort array
     Arrays.sort(items);
     
-    int discount = 0;
+    long discount = 0;
     int count = items.length - minItems;
 
     while (count >= 0) {
@@ -53,10 +53,10 @@ public class Groceries {
     return discount;
   }
 
-  static int calcTotalPrice(int[] items) {
-    int totalPrice = 0;
+  static long calcTotalPrice(long[] items) {
+    long totalPrice = 0;
 
-    for (int price : items) {
+    for (long price : items) {
         totalPrice += price;
     }
 
