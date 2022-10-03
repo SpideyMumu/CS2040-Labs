@@ -6,3 +6,4 @@ Completed Labs:
 - Lab 1A & B (Squaring Array & Spiral Snake)
 - Lab 2B (Amusement Park) Lab 2A E grade (RhythmGame)
 - Lab 3B (Entrepreneurship)
+- Lab 5A (Groceries)
