@@ -7,3 +7,4 @@ Completed Labs:
 - Lab 2B (Amusement Park) Lab 2A E grade (RhythmGame)
 - Lab 3B (Entrepreneurship)
 - Lab 5A (Groceries)
+- Lab 6B (Macarons)
