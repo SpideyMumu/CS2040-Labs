@@ -8,3 +8,4 @@ Completed Labs:
 - Lab 3B (Entrepreneurship)
 - Lab 5A (Groceries)
 - Lab 6B (Macarons)
+- Lab 7B
